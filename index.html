@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BikePro Auto Parts & Repairs</title>
+<meta name="description" content="Bike spare parts, repairs, sale and purchase. Browse parts, request prices, book service and contact us.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#home"><span>⚙</span> BikePro</a>
+    <nav>
+      <a href="#parts">Parts</a><a href="#services">Repairs</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-small" href="#booking">Book Repair</a>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">BIKE PARTS • REPAIR • SALE & PURCHASE</p>
+      <h1>Everything your bike needs, <em>under one roof.</em></h1>
+      <p class="lead">Quality bike spare parts, reliable repairs, and straightforward sale & purchase support. Get the part you need or book a service today.</p>
+      <div class="actions">
+        <a class="btn" href="#parts">Browse Parts</a>
+        <a class="btn btn-outline" href="#booking">Book a Repair</a>
+      </div>
+      <div class="trust"><span>✓ Experienced mechanics</span><span>✓ Genuine & compatible parts</span><span>✓ Fair pricing</span></div>
+    </div>
+    <div class="hero-card">
+      <div class="bike-icon">🏍️</div>
+      <p>QUICK SERVICE</p>
+      <h3>Need a part or repair?</h3>
+      <p>Send your bike model and requirement. We'll help you find the right solution.</p>
+      <a href="#contact" class="text-link">Get in touch →</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+ <div class="container stats-grid"><div><strong>All Bike Models</strong><span>Parts & support</span></div><div><strong>Repair Services</strong><span>From routine to major work</span></div><div><strong>Sale & Purchase</strong><span>Buy or sell with confidence</span></div><div><strong>Fast Response</strong><span>Call or WhatsApp us</span></div></div>
+</section>
+
+<section id="parts" class="section">
+ <div class="container">
+  <div class="section-head"><div><p class="eyebrow">OUR PARTS</p><h2>Bike parts you can count on.</h2></div><p>Can't find what you need? Ask us — we can help source the right part for your bike.</p></div>
+  <div class="cards">
+   <article class="card"><div class="part-icon">🔧</div><h3>Engine Parts</h3><p>Pistons, clutch components, filters, gaskets and more.</p><button onclick="selectPart('Engine Parts')">Request Price →</button></article>
+   <article class="card"><div class="part-icon">⚡</div><h3>Electrical Parts</h3><p>Batteries, bulbs, switches, wiring and electrical components.</p><button onclick="selectPart('Electrical Parts')">Request Price →</button></article>
+   <article class="card"><div class="part-icon">🛞</div><h3>Brakes & Wheels</h3><p>Brake pads, discs, cables, tyres and wheel-related parts.</p><button onclick="selectPart('Brakes & Wheels')">Request Price →</button></article>
+   <article class="card"><div class="part-icon">🏍</div><h3>Body & Accessories</h3><p>Mirrors, lights, levers, panels and useful bike accessories.</p><button onclick="selectPart('Body & Accessories')">Request Price →</button></article>
+  </div>
+ </div>
+</section>
+
+<section id="services" class="section dark">
+ <div class="container">
+  <div class="section-head"><div><p class="eyebrow">REPAIR & SERVICE</p><h2>From small fixes to full service.</h2></div><p>Tell us what your bike needs and we'll take it from there.</p></div>
+  <div class="service-grid">
+   <div class="service"><span>01</span><h3>General Service All Bikes</h3><p>Inspection, oil change, tuning and routine maintenance.</p></div>
+   <div class="service"><span>02</span><h3>Engine Repair All Bikes</h3><p>Diagnosis and repair for engine and performance issues.</p></div>
+   <div class="service"><span>03</span><h3>Brake & Clutch All Bikes</h3><p>Brake, clutch, cable and related repairs or replacement.</p></div>
+   <div class="service"><span>04</span><h3>Electrical Repair All Bikes</h3><p>Battery, starting, lighting, wiring and electrical troubleshooting.</p></div>
+   <div class="service"><span>05</span><h3>Tyre & Wheel All Bikes</h3><p>Tyre replacement, puncture work, wheel and related service.</p></div>
+   <div class="service"><span>06</span><h3>Other Repairs All Bikes</h3><p>Have a different problem? Bring it to us for inspection.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="booking" class="section">
+ <div class="container form-layout">
+  <div><p class="eyebrow">BOOK A REPAIR</p><h2>Tell us what your bike needs.</h2><p>Fill in the details and we'll contact you to confirm availability and pricing.</p><div class="contact-mini"><span>📞</span><div><strong>Call us</strong><br><a href="tel:+917503903054">+91 7503903054</a></div></div><div class="contact-mini"><span>💬</span><div><strong>WhatsApp</strong><br><a href="https://wa.me/917503903054" target="_blank">Chat with us</a></div></div></div>
+  <form id="bookingForm" class="form" onsubmit="submitBooking(event)">
+   <label>Name<input id="name" required placeholder="Your name"></label>
+   <label>Phone<input id="phone" required type="tel" placeholder="+91"></label>
+   <label>Bike model<input id="model" required placeholder="e.g. Honda Shine"></label>
+   <label>What do you need?<select id="need"><option>General Service</option><option>Engine Repair</option><option>Brake & Clutch</option><option>Electrical Repair</option><option>Tyre & Wheel</option><option>Other Repair</option></select></label>
+   <label>Details<textarea id="details" rows="4" placeholder="Describe the problem or service needed"></textarea></label>
+   <button class="btn" type="submit">Submit Booking Request</button>
+   <small id="formMsg"></small>
+  </form>
+ </div>
+</section>
+
+<section id="about" class="section light">
+ <div class="container about-grid"><div><p class="eyebrow">WHY CHOOSE US</p><h2>A practical, honest bike workshop.</h2></div><div><p>We help riders with bike spare parts, repairs, buying and selling. Our goal is simple: the right part, dependable workmanship and clear communication.</p><ul class="checks"><li>Parts for a wide range of bikes</li><li>Repair and maintenance support</li><li>Sale & purchase assistance</li><li>Price requests before you commit</li></ul></div></div>
+</section>
+
+<section id="contact" class="section contact">
+ <div class="container contact-box"><div><p class="eyebrow">GET IN TOUCH</p><h2>Ready to get your bike sorted?</h2><p>Call, WhatsApp, or visit our workshop.</p></div><div class="contact-details"><p><strong>Phone</strong><br><a href="tel:+917503903054">+91 7503903054</a></p><p><strong>WhatsApp</strong><br><a href="https://wa.me/917503903054" target="_blank">Message us</a></p><p><strong>Address</strong><br>Your Shop Address, Delhi, India</p></div></div>
+</section>
+</main>
+
+<footer><div class="container footer"><span>© 2026 BikePro Auto Parts & Repairs</span><span>Bike Parts • Repairs • Sale & Purchase</span></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
